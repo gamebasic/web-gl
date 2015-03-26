@@ -2,12 +2,10 @@
 // Copyright © Monarke Studios. All Rights Reserved.
 
 var Engine = function() {
-    alert("Engine")
+
     var gl = null;
 
-    var Initialize = function (canvas, width, height, fullscreen) {
-
-        alert("Initialize");
+    this.Initialize = function (canvas) {
 
         gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 
@@ -30,8 +28,7 @@ var Engine = function() {
         var buffer = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 
-    }
+    };
 
-};
+}
 var e = new Engine();
-e.Initialize();
