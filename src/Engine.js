@@ -1,11 +1,13 @@
 // Game Basic 3D Engine WebGL Build
 // Copyright © Monarke Studios. All Rights Reserved.
 
-(function(Engine) {
-
+var Engine = function() {
+    alert("Engine")
     var gl = null;
 
-    function Initialize(canvas, width, height, fullscreen) {
+    var Initialize = function (canvas, width, height, fullscreen) {
+
+        alert("Initialize");
 
         gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 
@@ -30,17 +32,6 @@
 
     }
 
-    function draw() {
-        var vertices = [ 0.0, 0.5, 0.0,
-                        -0.5, -0.5, 0.0,
-                         0.5, -0.5, 0.0 ];
-
-        gl.glColor3f(1f, 1f, 1f);
-        gl.bufferData(gl.ARRAY_BUFFER, new CanvasFloatArray(vertices), gl.STATIC_DRAW);
-        gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0);
-        gl.enableVertexAttribArray(0);
-        gl.drawArrays(gl.TRIANGLES, 0, 3);
-        gl.flush();
-    }
-
-});
+};
+var e = new Engine();
+e.Initialize();
