@@ -31,4 +31,3 @@ var Engine = function() {
     };
 
 }
-var e = new Engine();
